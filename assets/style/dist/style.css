@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  user-select: none;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: #cfcfcf;
+}
+
+.navbar {
+  --orange: orangered;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background: linear-gradient(-60deg, orangered, orange);
+  border-bottom: 1px solid var(--orange);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.navbar .logo {
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: 1px solid var(--orange);
+  cursor: pointer;
+  transition: 300ms ease;
+  color: black;
+}
+.navbar .logo:hover {
+  background-color: var(--orange);
+  border: 1px solid transparent;
+  color: white;
+}
+.navbar .right_div {
+  display: flex;
+  align-items: center;
+}
+.navbar .right_div .new_btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: white;
+  transition: 300ms ease;
+}
+.navbar .right_div .new_btn:hover {
+  background-color: transparent;
+  border-color: orange;
+  color: black;
+}
+
+.content {
+  height: calc(100% - 50px);
+  background: linear-gradient(-45deg, orange, orangered);
+}
+.content .mod-content {
+  padding: 10px;
+}
+.content .mod-content .mods {
+  max-width: 290px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 3px;
+  flex-direction: column;
+  transition: 200ms ease;
+}
+.content .mod-content .mods .mods__header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.371);
+}
+.content .mod-content .mods .mods__header span a[href="?settings"] {
+  padding: 5px;
+  margin-right: 5px;
+  background-color: rgba(254, 254, 254, 0.596);
+  color: white;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  transition: 200ms ease;
+}
+.content .mod-content .mods .mods__header span a[href="?settings"]:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+.content .mod-content .mods .mods__content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.content .mod-content .mods:hover {
+  background-color: rgba(0, 0, 0, 0.13);
+}

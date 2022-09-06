@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: #cfcfcf;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+.navbar {
+  --orange: orangered;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: linear-gradient(-60deg, orangered, orange);
+  border-bottom: 1px solid var(--orange);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar .logo {
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: 1px solid var(--orange);
+  cursor: pointer;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  color: black;
+}
+
+.navbar .logo:hover {
+  background-color: var(--orange);
+  border: 1px solid transparent;
+  color: white;
+}
+
+.navbar .right_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .right_div .new_btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: white;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.navbar .right_div .new_btn:hover {
+  background-color: transparent;
+  border-color: orange;
+  color: black;
+}
+
+.content {
+  overflow: auto;
+  height: calc(100% - 50px);
+  background: linear-gradient(-45deg, orange, orangered);
+}
+
+.content .mod-content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.content .mod-content .mods {
+  max-width: 300px;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 3px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.content .mod-content .mods .mods__header {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.379);
+}
+
+.content .mod-content .mods .mods__header span a[href="?settings"] {
+  padding: 10px;
+  margin-right: 5px;
+  background-color: rgba(254, 254, 254, 0.596);
+  color: white;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.content .mod-content .mods .mods__header span a[href="?settings"]:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.content .mod-content .mods .mods__header span a[href="?mods_name"] {
+  padding-left: 10px;
+  color: white;
+}
+
+.content .mod-content .mods .mods__header span a[href="?mods_name"]:hover {
+  color: rgba(255, 255, 255, 0.254);
+}
+
+.content .mod-content .mods .mods__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .mod-content .mods .mods__content span {
+  padding: 20px;
+}
+
+.content .mod-content .mods .mods__content span a {
+  font-size: 40px;
+  padding: 20px;
+  color: white;
+}
+
+.content .mod-content .mods .mods__content span a:hover {
+  color: rgba(255, 255, 255, 0.348);
+}
+
+.content .mod-content .mods .mods__datetime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 5px;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.267);
+}
+
+.content .mod-content .mods:hover {
+  background-color: rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 0 0 0 white;
+          box-shadow: 0 0 0 0 white;
+}
+
+.new-mods-popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 247, 0, 0.442);
+  display: none;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.new-mods-popup .close-popup {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: fleX;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.new-mods-popup .close-popup .fa-close {
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background-color: orangered;
+  color: white;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+
+.new-mods-popup .close-popup .fa-close:hover {
+  background-color: rgba(255, 68, 0, 0.309);
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */
